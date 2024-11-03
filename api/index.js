@@ -24,7 +24,7 @@ mongoose
   .connect(
     process.env.MONGO
   )
-  .then(app.listen(4000, console.log("connected to mongo")));
+  .then();
 
 app.post("/register", async (req, res) => {
   const { username, password } = req.body;
@@ -137,3 +137,5 @@ app.put('/post',uploadMiddleware.single('file'), async (req,res) => {
   });
 
 });
+
+app.listen(4000, console.log("connected to mongo"))
